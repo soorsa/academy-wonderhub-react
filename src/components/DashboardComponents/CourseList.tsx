@@ -1,0 +1,20 @@
+import React from "react";
+import NoPropertyFound from "../NoPropertyFound";
+import type { EnrolledCourse } from "../../data/types/CourseTypes";
+import CourseCard from "./CourseCard";
+
+type Props = {
+  courses: EnrolledCourse[];
+};
+const CourseList: React.FC<Props> = ({ courses }) => {
+  if (courses.length <= 0) return <NoPropertyFound />;
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-x-2 gap-y-8">
+      {courses.map((course) => (
+        <CourseCard key={course.id} course={course} />
+      ))}
+    </div>
+  );
+};
+
+export default CourseList;
