@@ -3,7 +3,6 @@ import type { AboutPageResponse } from "./types/aboutPageTypes";
 import type { ContactPageResponse } from "./types/contactPageTypes";
 import type { GetPropertyByIdResponse } from "./types/GetPropertyByIdResponse";
 import type { GetJobByIdResponse, JobsApiResponse } from "./types/jobListTypes";
-import type { PropertiesResponse } from "./types/propertiesPageTypes";
 import type { PropertyLocationResponse } from "./types/PropertyLocationTypes";
 import type { PropertiesTypeResponse } from "./types/propertyTypes";
 import type { GetUserResponse } from "./types/UserProfileTypes";
@@ -38,28 +37,6 @@ export const fetchVirtualTourPageData =
 //   const response = await apiClient.get(`/properties-page?page=${page}`);
 //   return response.data;
 // };
-export const fetchPropertiesPageData = async (
-  page: number,
-  filters: Record<string, any> = {}
-): Promise<PropertiesResponse> => {
-  const hasFilters = Object.values(filters).some((v) => v !== "");
-  console.log("fetching properties");
-  const params = new URLSearchParams({
-    page: String(page),
-    ...(filters.state && { state: filters.state }),
-    ...(filters.type && { type: filters.type }),
-    ...(filters.minPrice && { minPrice: filters.minPrice }),
-    ...(filters.maxPrice && { maxPrice: filters.maxPrice }),
-  });
-
-  const endpoint = hasFilters
-    ? `/filter-property?${params.toString()}`
-    : `/properties-page?page=${page}`;
-
-  const response = await apiClient.get(endpoint);
-  return response.data;
-};
-
 //Get Properties by ID Data
 export const getPropertyByID = async (
   id: number | string

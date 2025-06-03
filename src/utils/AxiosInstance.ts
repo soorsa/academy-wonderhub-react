@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useUserStore } from "../zustand/UserStore";
-import https from "https";
 export const baseURL = import.meta.env.VITE_BASE_URL;
 export const identifier = import.meta.env.VITE_IDENTIFIER;
 

@@ -28,7 +28,7 @@ const Pill: React.FC<PillProps> = ({
 
   return (
     <Component
-      to={type === "link" ? href : undefined}
+      to={type === "link" ? href : ""}
       onClick={onClick}
       disabled={type === "button" ? disabled || isLoading : undefined}
       className={`px-4 py-2 border border-wonderhub rounded-full transition duration-300 text-wonderhub hover:bg-wonderhub hover:text-white ${className}

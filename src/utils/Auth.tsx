@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // /utils/auth.tsx
 import apiClient from "./AxiosInstance";
 import { useUserStore } from "../zustand/UserStore";
@@ -21,6 +22,7 @@ const handleResendOTP = async () => {
     }
   } catch (error) {
     showToast("Failed to resend OTP. Please try again.", "error");
+    console.log(error);
   }
 };
 
@@ -83,7 +85,7 @@ const register = async (
     email: string;
     phone: string;
     password: string;
-    marketerReferralCode: string;
+    // marketerReferralCode: string;
   },
   { setSubmitting }: { setSubmitting: (isSubmitting: boolean) => void }
 ) => {
@@ -100,7 +102,7 @@ const register = async (
       email: values.email,
       phone_number: values.phone,
       password: values.password,
-      referral_code: values.marketerReferralCode,
+      // referral_code: values.marketerReferralCode,
     });
 
     if (response.data.success) {

@@ -1,6 +1,6 @@
 // stores/modalStore.ts
 import { create } from "zustand";
-import { ReactNode } from "react";
+import { type ReactNode } from "react";
 
 interface ModalState {
   isOpen: boolean;

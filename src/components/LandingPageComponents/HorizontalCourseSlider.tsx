@@ -1,7 +1,6 @@
 import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import clsx from "clsx";
 
 interface CourseCardProps {
   title: string;

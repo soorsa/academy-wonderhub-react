@@ -1,9 +1,6 @@
 import React from "react";
 import type { EnrolledCourse } from "../../data/types/CourseTypes";
-import { FaUsers } from "react-icons/fa";
-import Button from "../Button";
 import { ImBooks } from "react-icons/im";
-import { formatPrice } from "../../utils/utilities";
 import { BsArrowRight } from "react-icons/bs";
 import Pill from "../Pills";
 type Props = {

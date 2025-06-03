@@ -3,39 +3,8 @@ import AuthNavbar from "../../components/AuthComponents/AuthNav";
 import Slideshow from "../../components/AuthComponents/NewShildeshow";
 import { useOnboardingStore } from "../../zustand/OnboardingStore";
 import { useUserStore } from "../../zustand/UserStore";
-import ForgotPassword from "./ForgotPassword";
-import Login from "../Auth pages/Login";
-import OTPScreen from "../Auth pages/OTPScreen";
-import ResetPassword from "./ResetPassword";
-import SignUp from "../Auth pages/SignUp";
 
 const AuthScreen = () => {
-  const { step } = useOnboardingStore();
-  const stepContainer = () => {
-    switch (step) {
-      case "signup":
-        return <SignUp />;
-      case "login":
-        return <Login />;
-      case "verify OTP":
-        return <OTPScreen />;
-      // case "signup completed":
-      //   return <SignupComplete />;
-      case "forgot password":
-        return <ForgotPassword />;
-      case "reset password":
-        return <ResetPassword />;
-      // case "password reset success":
-      //   return <AddServices />;
-      // case "signup completed":
-      //   return <AddItems />;
-      // case "onboarding complete":
-      //   return <OnboardingComplete />;
-      default:
-        return <Login />;
-    }
-  };
-
   const handleReset = () => {
     useUserStore.getState().reset(); // Reset user store
     useOnboardingStore.getState().reset(); // Reset onboarding store

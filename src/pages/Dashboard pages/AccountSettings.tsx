@@ -1,5 +1,4 @@
-import React from "react";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form } from "formik";
 import * as Yup from "yup";
 // import { Switch } from "@headlessui/react"; // optional for toggle UI
 import InputField from "../../components/InputField";
@@ -35,7 +34,7 @@ const ProfileSettings = () => {
           console.log("Updated values:", values);
         }}
       >
-        {({ values, setFieldValue }) => (
+        {() => (
           <Form className="space-y-6">
             {/* Profile Picture */}
             <div className="bg-white rounded-3xl p-10 space-y-6">

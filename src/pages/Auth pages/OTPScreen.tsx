@@ -1,4 +1,10 @@
-import { useState, useRef, useEffect, ChangeEvent, KeyboardEvent } from "react";
+import {
+  useState,
+  useRef,
+  useEffect,
+  type ChangeEvent,
+  type KeyboardEvent,
+} from "react";
 import { useToastStore } from "../../zustand/useToastStore";
 import { useUserStore } from "../../zustand/UserStore";
 import { useOnboardingStore } from "../../zustand/OnboardingStore";
@@ -102,6 +108,7 @@ const OTPScreen: React.FC<OTPProps> = ({ length = 4 }) => {
       }
     } catch (error) {
       showToast("Failed to resend OTP. Please try again.", "error");
+      console.log(error);
     }
   };
 
@@ -118,7 +125,9 @@ const OTPScreen: React.FC<OTPProps> = ({ length = 4 }) => {
         {otp.map((value, index) => (
           <input
             key={index}
-            ref={(el) => (inputRefs.current[index] = el)}
+            ref={(el) => {
+              inputRefs.current[index] = el;
+            }}
             type="text"
             value={value}
             maxLength={1}

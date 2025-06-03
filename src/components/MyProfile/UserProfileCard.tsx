@@ -1,6 +1,6 @@
 import React from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import { Link, useRoutes } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useGetUser } from "../../data/hooks";
 import Loader from "../Loader";
 import ApiErrorBlock from "../ApiErrorBlock";
@@ -13,13 +13,7 @@ interface Props {
   imageUrl: string;
 }
 
-const UserProfileCard: React.FC<Props> = ({
-  name,
-  email,
-  joinedDate,
-  location,
-  imageUrl,
-}) => {
+const UserProfileCard: React.FC<Props> = ({ name, location, imageUrl }) => {
   const { data, isLoading, isError } = useGetUser();
   if (isLoading) return <Loader />;
   if (isError) return <ApiErrorBlock />;

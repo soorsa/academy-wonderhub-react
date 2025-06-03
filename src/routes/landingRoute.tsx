@@ -1,9 +1,6 @@
-import { Navigate, Outlet } from "react-router-dom";
-import { useUserStore } from "../zustand/UserStore";
+import { Outlet } from "react-router-dom";
 
 const LandingRoutes = () => {
-  const { isLoggedIn } = useUserStore();
-
   // Redirect UNAUTHENTICATED users to login
   return <Outlet />;
 };

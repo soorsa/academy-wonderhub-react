@@ -3,27 +3,26 @@ import {
   fetchAboutPageData,
   fetchContactPageData,
   fetchJobsPageData,
-  fetchPropertiesPageData,
   fetchVirtualTourPageData,
   getAllPropertyLocations,
   getAllPropertyType,
   getJobByID,
   getPropertyByID,
+  getUser,
 } from "./api";
 import type { AboutPageResponse } from "./types/aboutPageTypes";
 import type { ContactPageResponse } from "./types/contactPageTypes";
 import type { VirtualTourResponse } from "./types/virtualTourPageTypes";
-import type { PropertiesResponse } from "./types/propertiesPageTypes";
 import type { GetPropertyByIdResponse } from "./types/GetPropertyByIdResponse";
 import type { GetJobByIdResponse, JobsApiResponse } from "./types/jobListTypes";
 import type { PropertyLocationResponse } from "./types/PropertyLocationTypes";
 import type { PropertiesTypeResponse } from "./types/propertyTypes";
 import type { GetUserResponse } from "./types/UserProfileTypes";
-import { useUserStore } from "../zustand/UserStore";
+// import { useUserStore } from "../zustand/UserStore";
 
 // Query hook for homepage data with
 export const useGetUser = () => {
-  const { getUser } = useUserStore();
+  // const { getUser } = useUserStore();
   return useQuery<GetUserResponse>({
     queryKey: ["user-profile"],
     queryFn: getUser,
@@ -58,15 +57,6 @@ export const useVirtualTourpage = () => {
 //     queryFn: () => fetchPropertiesPageData(page),
 //   });
 // };
-export const usePropertiespage = (
-  page: number,
-  filters?: Record<string, any>
-) => {
-  return useQuery<PropertiesResponse>({
-    queryKey: ["properties-page", page, filters],
-    queryFn: () => fetchPropertiesPageData(page, filters),
-  });
-};
 
 // Query hook for properties page data with
 export const useGetPropertyByID = (id: number | string) => {

@@ -5,7 +5,7 @@ import { Formik } from "formik";
 import { useNavigate } from "react-router-dom";
 import { BsBellFill } from "react-icons/bs";
 
-const Header = ({ pageTitle }) => {
+const Header = ({ pageTitle }: { pageTitle: string }) => {
   const navigate = useNavigate();
   const newProperty = () => {
     navigate("/new-properties");

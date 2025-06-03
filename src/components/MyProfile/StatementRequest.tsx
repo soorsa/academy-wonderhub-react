@@ -1,7 +1,6 @@
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
 
-import React from "react";
 import InputField from "../InputField";
 import Button from "../Button";
 import { useModalStore } from "../../zustand/useModalStore";

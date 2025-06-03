@@ -1,21 +1,13 @@
 import { Suspense, lazy } from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { useOnboardingStore } from "../zustand/OnboardingStore";
-import { useUserStore } from "../zustand/UserStore";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Loader from "../components/Loader";
 // import AuthScreen from "../pages/AuthScreen";
 import ProtectedRoutes from "./protectedRoutes";
 import HomeScreen from "../pages/Dashboard pages/HomeScreen";
 import Toast from "../components/Toast";
-import { useToastStore } from "../zustand/useToastStore";
 import Modal from "../components/Modal2";
-// import ProfileSettings from "../pages/AccountSettings";
-// import LandingRoutes from "./LandingRoute";
 import AuthRoutes from "./authRoutes";
-// import Login from "../pages/Login";
-// import SignUp from "../pages/SignUp";
 import LandingPageIndex from "../pages/landing pages/LandingPageParent";
-// import LandingScreen from "../pages/LandingScreen";
 import CoursesPage from "../pages/landing pages/CoursesPage";
 import LandingRoutes from "./landingRoute";
 import LandingScreen from "../pages/landing pages/LandingScreen";
@@ -33,9 +25,9 @@ const DashboardScreen = lazy(
 );
 
 const AllRoutes = () => {
-  const { message, type, hideToast } = useToastStore();
-  const { hasCompletedOnboarding } = useOnboardingStore();
-  const { isLoggedIn } = useUserStore();
+  // const { message, type, hideToast } = useToastStore();
+  // const { hasCompletedOnboarding } = useOnboardingStore();
+  // const { isLoggedIn } = useUserStore();
 
   return (
     <>
@@ -87,7 +79,7 @@ const AllRoutes = () => {
           </Routes>
         </Suspense>
       </BrowserRouter>
-      <Toast message={message} type={type} onClose={hideToast} />
+      <Toast />
       <Modal />
     </>
   );

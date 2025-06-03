@@ -17,7 +17,7 @@ const routeTitles = {
   "/settings": "Account Settings",
   "/support": "Support",
 };
-function getPageTitle(pathname) {
+function getPageTitle(pathname: string) {
   if (pathname.startsWith("/my-properties/")) {
     return "My Property";
   }
@@ -31,7 +31,7 @@ function getPageTitle(pathname) {
     return "My Property";
   }
 
-  return routeTitles[pathname] || "Dashboard";
+  return (routeTitles as Record<string, string>)[pathname] || "Dashboard";
 }
 function DashboardScreen() {
   const location = useLocation();

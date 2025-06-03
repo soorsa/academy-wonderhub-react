@@ -1,4 +1,4 @@
-import React, { useEffect, FC, ReactNode } from "react";
+import { useEffect, type FC, type ReactNode } from "react";
 import { IoClose } from "react-icons/io5";
 
 interface ModalProps {

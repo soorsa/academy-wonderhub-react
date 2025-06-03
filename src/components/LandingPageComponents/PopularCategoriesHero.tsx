@@ -1,5 +1,3 @@
-import React from "react";
-import { BsArrowUpRight } from "react-icons/bs";
 import { MdArrowOutward } from "react-icons/md";
 import Pill from "../Pills";
 

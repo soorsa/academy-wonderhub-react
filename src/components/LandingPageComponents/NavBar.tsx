@@ -5,7 +5,6 @@ import { IoCaretDown } from "react-icons/io5";
 import { Link, useLocation } from "react-router-dom";
 import Button from "../Button";
 import { useUserStore } from "../../zustand/UserStore";
-import { GoReport } from "react-icons/go";
 import { GiChart } from "react-icons/gi";
 import { FaSchool } from "react-icons/fa";
 import { BiCog, BiLogOut } from "react-icons/bi";

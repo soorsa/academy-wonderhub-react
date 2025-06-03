@@ -1,7 +1,6 @@
 import React from "react";
 import NoPropertyFound from "../NoPropertyFound";
 import type { EnrolledCourse } from "../../data/types/CourseTypes";
-import CourseCard from "./CourseCard";
 import MyCourseCard from "./MyCourseCard";
 
 type Props = {
