@@ -1,4 +1,5 @@
 import type { EnrolledCourse } from "./types/CourseTypes";
+import type { Notification } from "./types/NotificationTypes";
 import type { Transaction } from "./types/TransactionTypes";
 
 export const enrolledCourses: EnrolledCourse[] = [
@@ -106,13 +107,15 @@ export const transactionData: Transaction[] = [
   },
 ];
 
-export const NotificationData = [
+export const NotificationData: Notification[] = [
   {
     id: 1,
     title: "New Course Alert!",
     content:
       "By training teachers in ICT and Data Science and introducing structured online tech training for rural students, this initiative aims to bridge the digital divide and enhance learning experiences, equipping students with future-ready skills that align with global education standards.",
     created_at: "25 march 2025",
+    is_read: "Read",
+    updated_at: "25 march 2025",
   },
   {
     id: 2,
@@ -120,6 +123,8 @@ export const NotificationData = [
     content:
       "By training teachers in ICT and Data Science and introducing structured online tech training for rural students, this initiative aims to bridge the digital divide and enhance learning experiences, equipping students with future-ready skills that align with global education standards.",
     created_at: "25 march 2025",
+    is_read: "Unread",
+    updated_at: "25 march 2025",
   },
   {
     id: 3,
@@ -127,6 +132,8 @@ export const NotificationData = [
     content:
       "By training teachers in ICT and Data Science and introducing structured online tech training for rural students, this initiative aims to bridge the digital divide and enhance learning experiences, equipping students with future-ready skills that align with global education standards.",
     created_at: "25 march 2025",
+    is_read: "Read",
+    updated_at: "25 march 2025",
   },
   {
     id: 4,
@@ -134,5 +141,7 @@ export const NotificationData = [
     content:
       "By training teachers in ICT and Data Science and introducing structured online tech training for rural students, this initiative aims to bridge the digital divide and enhance learning experiences, equipping students with future-ready skills that align with global education standards.",
     created_at: "25 march 2025",
+    is_read: "Read",
+    updated_at: "25 march 2025",
   },
 ];
