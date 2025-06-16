@@ -19,6 +19,9 @@ import TransactionsPage from "../pages/Dashboard pages/TransactionScreen";
 import CoursePage from "../pages/Dashboard pages/CoursesPage";
 import MyCoursePage from "../pages/Dashboard pages/MyCoursePage";
 import FavouritePage from "../pages/Dashboard pages/FavouritePage";
+import EnrolledCourseDetailPage from "../pages/Dashboard pages/EnrolledCourseDetail";
+import CourseDetailPage from "../pages/Dashboard pages/CourseDetail";
+import NotificationsPage from "../pages/Dashboard pages/NotificationScreen";
 
 const DashboardScreen = lazy(
   () => import("../pages/Dashboard pages/DashboardScreen")
@@ -49,7 +52,19 @@ const AllRoutes = () => {
                   path="/dashboard/transactions"
                   element={<TransactionsPage />}
                 />
+                <Route
+                  path="/dashboard/notifications"
+                  element={<NotificationsPage />}
+                />
                 <Route path="/dashboard/courses" element={<CoursePage />} />
+                <Route
+                  path="/dashboard/course/:id"
+                  element={<CourseDetailPage />}
+                />
+                <Route
+                  path="/dashboard/course/enrolled/:id"
+                  element={<EnrolledCourseDetailPage />}
+                />
 
                 <Route
                   path="/dashboard/my-courses"

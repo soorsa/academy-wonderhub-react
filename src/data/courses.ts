@@ -105,3 +105,34 @@ export const transactionData: Transaction[] = [
     status: "pending",
   },
 ];
+
+export const NotificationData = [
+  {
+    id: 1,
+    title: "New Course Alert!",
+    content:
+      "By training teachers in ICT and Data Science and introducing structured online tech training for rural students, this initiative aims to bridge the digital divide and enhance learning experiences, equipping students with future-ready skills that align with global education standards.",
+    created_at: "25 march 2025",
+  },
+  {
+    id: 2,
+    title: "New Course Alert!",
+    content:
+      "By training teachers in ICT and Data Science and introducing structured online tech training for rural students, this initiative aims to bridge the digital divide and enhance learning experiences, equipping students with future-ready skills that align with global education standards.",
+    created_at: "25 march 2025",
+  },
+  {
+    id: 3,
+    title: "New Course Alert!",
+    content:
+      "By training teachers in ICT and Data Science and introducing structured online tech training for rural students, this initiative aims to bridge the digital divide and enhance learning experiences, equipping students with future-ready skills that align with global education standards.",
+    created_at: "25 march 2025",
+  },
+  {
+    id: 4,
+    title: "New Course Alert!",
+    content:
+      "By training teachers in ICT and Data Science and introducing structured online tech training for rural students, this initiative aims to bridge the digital divide and enhance learning experiences, equipping students with future-ready skills that align with global education standards.",
+    created_at: "25 march 2025",
+  },
+];

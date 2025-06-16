@@ -27,7 +27,7 @@ const CourseListProg: React.FC<Props> = ({
       <ul className="space-y-2">
         {courses.map((course) => (
           <li
-            onClick={() => navigate(`/my-property/${course.id}`)}
+            onClick={() => navigate(`course/enrolled/${course.id}`)}
             key={course.id}
             className={`p-4 cursor-pointer rounded-3xl even:bg-gray-100 flex justify-between items-center gap-2`}
           >
@@ -57,6 +57,7 @@ const CourseListProg: React.FC<Props> = ({
               <Pill
                 label="Continue"
                 className="text-xs !py-1 w-full "
+                onClick={() => navigate(`course/enrolled/${course.id}`)}
                 rightIcon={<BsArrowRight />}
               />
             </div>

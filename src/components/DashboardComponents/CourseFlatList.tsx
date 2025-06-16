@@ -28,7 +28,7 @@ const CourseFlatList: React.FC<Props> = ({
       <ul className="space-y-2">
         {courses.map((course) => (
           <li
-            onClick={() => navigate(`/my-property/${course.id}`)}
+            onClick={() => navigate(`course/${course.id}`)}
             key={course.id}
             className={`p-4 cursor-pointer rounded-3xl even:bg-gray-100 flex justify-between items-center gap-2`}
           >

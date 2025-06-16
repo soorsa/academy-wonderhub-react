@@ -3,10 +3,12 @@ import type { EnrolledCourse } from "../../data/types/CourseTypes";
 import { ImBooks } from "react-icons/im";
 import { BsArrowRight } from "react-icons/bs";
 import Pill from "../Pills";
+import { useNavigate } from "react-router-dom";
 type Props = {
   course: EnrolledCourse;
 };
 const MyCourseCard: React.FC<Props> = ({ course }) => {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col bg-white p-2 md:p-4 rounded-2xl hover:shadow-lg">
       <img
@@ -40,6 +42,7 @@ const MyCourseCard: React.FC<Props> = ({ course }) => {
         </div>
         <Pill
           label="Continue"
+          onClick={() => navigate(`/dashboard/course/enrolled/${course.id}`)}
           className="text-xs !py-1 w-full "
           rightIcon={<BsArrowRight />}
         />

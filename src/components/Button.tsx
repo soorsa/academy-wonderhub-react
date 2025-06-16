@@ -53,6 +53,7 @@ const Button: React.FC<ButtonProps> = ({
               fill="currentColor"
             />
           </svg>
+          <span>Loading</span>
         </div>
       ) : (
         <div className="flex items-center justify-center">

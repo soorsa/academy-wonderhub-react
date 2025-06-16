@@ -5,10 +5,12 @@ import Button from "../Button";
 import { ImBooks } from "react-icons/im";
 import { formatPrice } from "../../utils/utilities";
 import { IoHeartOutline } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 type Props = {
   course: EnrolledCourse;
 };
 const CourseCard: React.FC<Props> = ({ course }) => {
+  const navigate = useNavigate();
   return (
     <div className="relative flex flex-col bg-white p-2 md:p-4 rounded-2xl hover:shadow-lg">
       <button
@@ -46,6 +48,7 @@ const CourseCard: React.FC<Props> = ({ course }) => {
         <Button
           label="Enroll"
           className="text-sm"
+          onClick={() => navigate(`/dashboard/course/${course.id}`)}
           rightIcon={
             <span className="text-xs ml-5 md:ml-10">
               {formatPrice(course.price)}

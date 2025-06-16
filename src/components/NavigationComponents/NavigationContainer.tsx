@@ -2,11 +2,10 @@ import NavItem from "./NavItem";
 import { FaUsers } from "react-icons/fa";
 import { FaArrowRightArrowLeft } from "react-icons/fa6";
 import { MdDashboardCustomize, MdLiveTv, MdOutlineHelp } from "react-icons/md";
-import { IoSettingsSharp } from "react-icons/io5";
+import { IoHeartOutline, IoSettingsSharp } from "react-icons/io5";
 import { RiLogoutBoxRFill, RiNotificationBadgeFill } from "react-icons/ri";
-import NavbarAddorder from "./NavbarAddorder";
+// import NavbarAddorder from "./NavbarAddorder";
 import Auth from "../../utils/Auth";
-import { BiHeartSquare } from "react-icons/bi";
 import { TbSchool } from "react-icons/tb";
 
 function NavigationContainer() {
@@ -44,7 +43,7 @@ function NavigationContainer() {
             <hr className="text-gray-300 w-full" />
           </div>
           <NavItem
-            label="Courses"
+            label="Explore Courses"
             icon={<TbSchool className=" w-4 h-4" />}
             path="/dashboard/courses"
           />
@@ -55,7 +54,7 @@ function NavigationContainer() {
           />
           <NavItem
             label="Favourites"
-            icon={<BiHeartSquare className=" w-4 h-4" />}
+            icon={<IoHeartOutline className=" w-4 h-4" />}
             path="/dashboard/my-favourites"
           />
           <NavItem
@@ -83,7 +82,7 @@ function NavigationContainer() {
           />
 
           <NavItem
-            label="Surport"
+            label="Help Center"
             icon={<MdOutlineHelp className=" w-4 h-4" />}
             path="/dashboard/support"
           />
@@ -97,9 +96,7 @@ function NavigationContainer() {
             Logout
           </button>
         </nav>
-        <div className="px-4 py-20">
-          <NavbarAddorder />
-        </div>
+        <div className="px-4 py-20">{/* <NavbarAddorder /> */}</div>
       </div>
     </div>
   );
